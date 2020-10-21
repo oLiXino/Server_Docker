@@ -1,0 +1,6 @@
+taskA:
+docker-compose up
+
+nginx:
+docker build -t nginx .
+docker run -d --name nginx -p 80:80 -p 443:443 --link=taska_web_1 --net taska_default nginx
